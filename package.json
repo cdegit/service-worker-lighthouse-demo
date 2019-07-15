@@ -1,0 +1,8 @@
+{
+  "name": "sw-lighthouse-demo",
+  "version": "1.0.0",
+  "author": "Cassie de Git",
+  "dependencies": {
+    "express": "4.16.3"
+  }
+}

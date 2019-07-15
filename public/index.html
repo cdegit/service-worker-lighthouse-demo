@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <link rel="manifest" href="/manifest.json">
+    </head>
+    <body>
+        Run Lighthouse on me!
+
+        <script>
+            const installSW = () => {
+                navigator.serviceWorker.register(`/worker.js?breaker=${Date.now()}`)
+                    .then(() => navigator.serviceWorker.ready)
+                    .then(() => {
+                        console.log('Service worker is ready')
+                    })
+                    .catch(console.error)
+            }
+            installSW()
+        </script>
+    </body>
+</html>
